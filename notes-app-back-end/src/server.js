@@ -4,11 +4,11 @@ import routes from './routes.js';
 import process from 'process';
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 const host = process.env.NODE_ENV !== 'production'? 'localhost' : '0.0.0.0';
 
 app.use(cors({
-    origin: 'http://localhost:8080'
+    origin: '*'
 }));
 app.use(express.json());
 app.use('/', routes);
