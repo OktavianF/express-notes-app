@@ -13,6 +13,6 @@ app.use(cors({
 app.use(express.json());
 app.use('/', routes);
 
-app.listen(port, port, () => {
-    console.log(`Server is running on port http://${host}:${port}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server is running on port http://0.0.0.0:${port}`);
 });
