@@ -4,7 +4,7 @@ import routes from './routes.js';
 import process from 'process';
 
 const app = express();
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 3000;
 const host = process.env.NODE_ENV !== 'production'? 'localhost' : '0.0.0.0';
 
 app.use(cors({
@@ -13,6 +13,6 @@ app.use(cors({
 app.use(express.json());
 app.use('/', routes);
 
-app.listen(port, () => {
+app.listen(port, port, () => {
     console.log(`Server is running on port http://${host}:${port}`);
 });
